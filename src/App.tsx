@@ -1,7 +1,7 @@
 import { Background } from './components/Background'
 import { Hero } from './components/Hero'
 import { SurveyCard } from './components/SurveyCard'
-import { AudioToggle } from './components/AudioToggle'
+import { AudioPanel } from './components/AudioPanel'
 import './App.css'
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
         <Hero />
         <SurveyCard />
       </main>
-      <AudioToggle />
+      <AudioPanel />
     </div>
   )
 }
