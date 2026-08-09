@@ -861,11 +861,12 @@
 }
 
 /* Tablets portrait */
+/* Tablets portrait — let palms collide for a denser frame */
 @media (max-width: 768px) {
   :root {
     --palm-height: clamp(40rem, 165vh, 88rem);
-    --palm-max-width: min(94vw, 38rem);
-    --palm-inset-x: -12vw;
+    --palm-max-width: min(100vw, 42rem);
+    --palm-inset-x: -6vw;
     --palm-opacity: 0.85;
     --main-padding-y: clamp(1.75rem, 4vw, 3rem);
     --content-max: 440px;
@@ -888,12 +889,12 @@
   }
 }
 
-/* Large phones */
+/* Large phones — embrace the palm overlap */
 @media (max-width: 640px) {
   :root {
     --palm-height: clamp(34rem, 155vh, 72rem);
-    --palm-max-width: min(74vw, 26rem);
-    --palm-inset-x: -12vw;
+    --palm-max-width: min(105vw, 36rem);
+    --palm-inset-x: -4vw;
     --palm-opacity: 0.8;
     --main-gap: 1.75rem;
     --content-max: 100%;
@@ -913,8 +914,8 @@
 @media (max-width: 480px) {
   :root {
     --palm-height: clamp(28rem, 150vh, 60rem);
-    --palm-max-width: 78vw;
-    --palm-inset-x: -14vw;
+    --palm-max-width: 110vw;
+    --palm-inset-x: -2vw;
     --palm-opacity: 0.78;
     --main-padding-x: 1rem;
     --main-padding-y: 1.5rem;
@@ -956,8 +957,8 @@
 @media (max-width: 375px) {
   :root {
     --palm-height: clamp(24rem, 145vh, 52rem);
-    --palm-max-width: 84vw;
-    --palm-inset-x: -16vw;
+    --palm-max-width: 115vw;
+    --palm-inset-x: 0;
     --main-padding-x: 0.875rem;
   }
 

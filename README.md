@@ -27,6 +27,8 @@ If the survey does not appear when clicking **Launch Survey**, check your Survey
 2. Under **Behavior**, set the popup to show **Immediately** (the script triggers on load)
 3. Alternatively, switch the collector type to **Embedded button** if you want SurveyMonkey to manage the trigger directly
 
+The popup wrapper allows **horizontal scrolling** when the survey is wider than the modal (common on mobile).
+
 ## Deploy to Vercel
 
 ### Option A — Vercel CLI
@@ -57,6 +59,20 @@ No environment variables are required.
 
 ```
 src/
-  components/   # Hero, survey card, background, audio toggle
-  lib/          # SurveyMonkey loader
+  components/   # Hero, survey card, background, sound panel
+  lib/          # SurveyMonkey loader, Web Audio soundtrack engine
 ```
+
+## Soundtrack
+
+The sound panel in the bottom-right expands to offer three synthesized vibes — no audio
+files are shipped, everything is generated live with the Web Audio API:
+
+| Vibe | Character |
+|------|-----------|
+| Sunset Cruise | Warm major-7 pad with soft bell arpeggios, 74 BPM |
+| Neon Drive | Driving bass, hats, and a bright arp, 106 BPM |
+| Poolside | Tropical marimba-style plucks and shakers, 94 BPM |
+
+Audio never autoplays — it starts only after the visitor picks a vibe, and the panel
+includes a volume slider plus a Silence option.

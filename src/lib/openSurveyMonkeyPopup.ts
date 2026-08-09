@@ -1,8 +1,12 @@
+import { enableSurveyMonkeyScrollFix } from './surveyMonkeyScrollFix'
+
 interface SMCXWindow extends Window {
   SMCX?: unknown[] & { show?: () => void }
 }
 
 export async function openSurveyMonkeyPopup(): Promise<void> {
+  enableSurveyMonkeyScrollFix()
+
   const { SURVEY_SCRIPT_ID, SURVEY_SCRIPT_SRC } = await import('./surveyMonkey')
   const win = window as SMCXWindow
   win.SMCX = win.SMCX ?? []
