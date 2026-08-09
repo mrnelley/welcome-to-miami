@@ -1,42 +1,16 @@
 /*
- * SurveyMonkey website-collector popup overrides.
- * The iframe content is cross-origin; horizontal scroll must live on the wrapper.
+ * SurveyMonkey popup — horizontal scroll only.
+ * Do NOT override widget width/position; SurveyMonkey sets those via JS.
  */
 
-.smcx-widget,
-.smcx-widget.smcx-show {
-  max-width: min(960px, calc(100vw - 2rem)) !important;
-  width: auto !important;
-  box-sizing: border-box !important;
-}
-
-.smcx-iframe-container {
+.smcx-modal .smcx-iframe-container {
   overflow-x: auto !important;
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
-  max-width: calc(100vw - 2rem) !important;
-  box-sizing: border-box !important;
 }
 
-.smcx-iframe-container iframe {
+.smcx-modal .smcx-iframe-container iframe {
   display: block !important;
-  min-width: 720px !important;
-  max-width: none !important;
   border: 0;
-}
-
-@media (max-width: 768px) {
-  .smcx-widget,
-  .smcx-widget.smcx-show {
-    max-width: calc(100vw - 1rem) !important;
-  }
-
-  .smcx-iframe-container {
-    max-width: calc(100vw - 1rem) !important;
-  }
-
-  .smcx-iframe-container iframe {
-    min-width: 640px !important;
-  }
 }
