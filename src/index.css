@@ -17,7 +17,7 @@
   --palm-max-width: min(92vw, 56rem);
   --palm-inset-x: -9vw;
   --palm-opacity: 0.92;
-  --content-max: 480px;
+  --content-max: 520px;
   --main-gap: clamp(2rem, 6vw, 4rem);
   --main-padding-y: clamp(2rem, 5vw, 4rem);
   --main-padding-x: clamp(1rem, 4vw, 2rem);

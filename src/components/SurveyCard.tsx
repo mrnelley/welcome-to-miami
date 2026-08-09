@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { openSurveyMonkeyPopup } from '../lib/openSurveyMonkeyPopup'
+import { DINNER_RESTAURANTS } from '../data/restaurants'
 
 export function SurveyCard() {
   const [loading, setLoading] = useState(false)
@@ -32,6 +33,36 @@ export function SurveyCard() {
         <p className="survey-card__copy">
           Help us plan the HDC employee dinner — where and when works for you?
         </p>
+
+        <div className="survey-card__restaurants">
+          <p className="survey-card__restaurants-heading">Dinner options</p>
+          <ul className="survey-card__restaurant-list">
+            {DINNER_RESTAURANTS.map((restaurant) => (
+              <li key={restaurant.name} className="survey-card__restaurant-item">
+                <a
+                  href={restaurant.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="survey-card__restaurant-link"
+                >
+                  {restaurant.name}
+                </a>
+                <span className="survey-card__restaurant-sep" aria-hidden="true">
+                  {' '}
+                  |{' '}
+                </span>
+                <a
+                  href={restaurant.menu}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="survey-card__restaurant-link survey-card__restaurant-link--menu"
+                >
+                  {restaurant.name} — menu
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <button
           type="button"

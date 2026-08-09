@@ -434,10 +434,68 @@
 }
 
 .survey-card__copy {
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.25rem;
   font-size: clamp(0.85rem, 2.5vw, 0.95rem);
   line-height: 1.65;
   color: var(--text-dim);
+}
+
+.survey-card__restaurants {
+  margin-bottom: 1.5rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgba(255, 209, 102, 0.2);
+}
+
+.survey-card__restaurants-heading {
+  margin: 0 0 0.75rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--sunset-yellow);
+  text-shadow: 0 0 8px rgba(255, 209, 102, 0.45);
+}
+
+.survey-card__restaurant-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.survey-card__restaurant-item {
+  font-size: clamp(0.72rem, 2.2vw, 0.82rem);
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.survey-card__restaurant-sep {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.survey-card__restaurant-link {
+  color: var(--cyan);
+  text-decoration: none;
+  text-shadow: 0 0 8px rgba(0, 187, 249, 0.35);
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
+}
+
+.survey-card__restaurant-link:hover {
+  color: var(--teal);
+  text-shadow: 0 0 12px rgba(0, 245, 212, 0.55);
+}
+
+.survey-card__restaurant-link--menu {
+  color: var(--pink-hot);
+  text-shadow: 0 0 8px rgba(255, 110, 199, 0.35);
+}
+
+.survey-card__restaurant-link--menu:hover {
+  color: var(--pink);
+  text-shadow: 0 0 12px rgba(255, 45, 149, 0.5);
 }
 
 .survey-card__button {
@@ -937,6 +995,10 @@
 
   .survey-card__frame {
     padding: 1.5rem;
+  }
+
+  .survey-card__restaurant-item {
+    font-size: 0.72rem;
   }
 
   .survey-card__title {
